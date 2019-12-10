@@ -16,7 +16,8 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"))
 
 
 app.get("/", (req,res)=>{
-    res.send("Hello World")
+    res.send(JSON.stringify({Hello:"World"}))
+    console.log("Hello")
 });
 
 app.use("/api", workoutRouter, (req, res, next)=>{
@@ -25,8 +26,6 @@ app.use("/api", workoutRouter, (req, res, next)=>{
     res.header("Access-Control-Allow-Headers", "Content-Type")
 });
 
-app.get("/", (req,res, next)=>{
-    
-})
+
 
 app.listen(apiPort, ()=> console.log(`Server running on port ${apiPort}`));
