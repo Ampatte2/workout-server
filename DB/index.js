@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGO_CLIENT, {useUnifiedTopology:true}, function(error){
+mongoose.connect(process.env.MONGO_CLIENT, {useNewUrlParser: true, useUnifiedTopology: true}, function(error){
     if(error){
         console.log(error)
     }else{
