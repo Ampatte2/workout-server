@@ -1,0 +1,28 @@
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex 666cabb..d7d908f 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -818,6 +818,11 @@[m
+       "resolved": "https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz",[m
+       "integrity": "sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac="[m
+     },[m
+[32m+[m[32m    "fs": {[m
+[32m+[m[32m      "version": "0.0.1-security",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/fs/-/fs-0.0.1-security.tgz",[m
+[32m+[m[32m      "integrity": "sha1-invTcYa23d84E/I4WLV+yq9eQdQ="[m
+[32m+[m[32m    },[m
+     "fs-minipass": {[m
+       "version": "1.2.7",[m
+       "resolved": "https://registry.npmjs.org/fs-minipass/-/fs-minipass-1.2.7.tgz",[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex 910c258..fef5a13 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -15,6 +15,7 @@[m
+     "cors": "^2.8.5",[m
+     "dotenv": "^8.2.0",[m
+     "express": "^4.17.1",[m
+[32m+[m[32m    "fs": "0.0.1-security",[m
+     "mongoose": "^5.7.8",[m
+     "nodemon": "^1.19.4"[m
+   }[m
