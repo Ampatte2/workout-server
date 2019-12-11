@@ -1,0 +1,11 @@
+.collapsible{
+    background-color: #2B2D42;
+    color:#78C0E0;
+    border-radius:2px;
+    
+}
+
+.collapsible:hover{
+    background-color: #4F8585;
+}
+
