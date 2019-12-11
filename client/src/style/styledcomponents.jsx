@@ -121,8 +121,8 @@ background-color: #2B2D42
 color:#78C0E0;
 border:none
 position:relative;
-top:25px;
-margin-right: 5px;
+top:40px;
+margin-right: 10px;
 `
 const Nav = styled.nav`
     margin-bottom:20px;

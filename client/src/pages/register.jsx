@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import {registerUser} from "../actions"
 
-import {Wrapper,Form, Header1, Button, Paragraph, Input} from "../style/styledcomponents"
+import {Wrapper,Form, Header1, Button, Input} from "../style/styledcomponents"
 
 //call api that creates new user
 //redirect to login page

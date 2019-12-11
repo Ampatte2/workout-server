@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {connect} from "react-redux";
 import {logOut} from "../actions";
 import logo from "../images/Banner.jpg";
-import {NavButton, Nav} from "../style/styledcomponents"
+import {NavButton} from "../style/styledcomponents"
 
 
 const List = styled.div`

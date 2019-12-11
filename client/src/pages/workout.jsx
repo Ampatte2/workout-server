@@ -81,6 +81,7 @@ class workout extends Component {
                                height: "100%"
                            }}
                            src={`https://www.youtube.com/embed/${item2.video}`}
+                           title = {index2}
                            frameBorder="0"
                            />
                    </div></Collapsible></CollDiv>
