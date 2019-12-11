@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import api from "../api"
 import { connect } from 'react-redux';
 import {registerUser} from "../actions"
 
