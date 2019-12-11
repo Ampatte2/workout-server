@@ -4,7 +4,7 @@ import App from './app';
 import {Provider} from "react-redux";
 import store from "./store/store"
 import { saveState } from './store/localStorage';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 store.subscribe(()=>{
     saveState(store.getState());
