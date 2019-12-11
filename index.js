@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
-const apiPort = process.env.PORT || 4000;
+const apiPort = 4000;
 const db = require("./DB");
 const workoutRouter = require("./routes/workout-router");
 
