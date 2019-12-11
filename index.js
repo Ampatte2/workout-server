@@ -6,7 +6,7 @@ const app = express();
 const apiPort = 4000;
 const db = require("./DB");
 const workoutRouter = require("./routes/workout-router");
-
+const path = require("path");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors());
 app.use(bodyParser.json())
