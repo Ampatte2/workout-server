@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
-const apiPort = 4000;
+const apiPort = process.env.PORT || 4000;
 const db = require("./DB");
 const workoutRouter = require("./routes/workout-router");
 const path = require("path");
@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 if(process.env.NODE_ENV=== "production"){
     app.use(express.static("client/build"))
 }
-app.get("*", (req,res)=>{
+app.get("/", (req,res)=>{
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
 })
 
