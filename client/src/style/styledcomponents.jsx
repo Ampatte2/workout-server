@@ -38,14 +38,19 @@ const Paragraph = styled.p`
     width:75%;
     margin:auto;
     margin-top:20px;
-    font-size:2vw;
+    font-size:1.5vw;
     @media ${device.tablet}{
         font-size:4.0vw;
     }
 `
 const Header1 = styled.h1`
     text-align: center;
-    
+    font-size:3vw
+    margin-top:3%
+    margin-bottom:3%;
+    @media ${device.tablet}{
+        font-size:6.0vw;
+    }
 `
 
 const Header2 = styled.h2`

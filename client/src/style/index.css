@@ -9,13 +9,6 @@
 .collapsible:hover{
     background-color: #4F8585;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 20px 20px 20px 20px;
-  overflow: hidden;
-  background-color:#2B2D42;
-}
 
 li {
   float: left;
