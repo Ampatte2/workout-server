@@ -4,12 +4,11 @@ import styled from "styled-components";
 import {connect} from "react-redux";
 import {logOut} from "../actions";
 import logo from "../images/Banner.jpg";
-import {NavButton} from "../style/styledcomponents"
+import {NavButton, List} from "../style/styledcomponents"
+import Collapsible from "react-collapsible"
 
 
-const List = styled.div`
-    float:right;
-`
+
 
 
 
@@ -24,29 +23,30 @@ class Links extends Component {
             display = <>
             <img src={logo} width="100" height = "100" alt=""/>
             <List>
-            <NavButton>
-            <Link to="/login" className="navbar-brand" onClick={this.props.logOut}>Logout</Link>
-            </NavButton>
+            
+            <Link to="/login" className="navbar-brand" onClick={this.props.logOut}><NavButton>Logout</NavButton></Link>
+            
             </List>
             </>
         } else{
             display = <>
-                <img src={logo} width="100" height = "100" alt=""/>
+                <img src={logo} width="100" height = "100"  alt=""/>
                 
                 
                 <List>
-                <NavButton><Link to="/" className="navbar-brand">Workout Mixer</Link></NavButton>
-                <NavButton>
-                    <Link to="/login" className="nav-link">
+                
+                <Link to="/" className="navbar-brand"><NavButton>Workout Mixer</NavButton></Link>
+                
+                    <Link to="/login" className="nav-link"><NavButton>
                         Login
-                    </Link>
-                </NavButton>
+                    </NavButton></Link>
+                
 
-                <NavButton>
-                    <Link to="/register" className="nav-link">
+                
+                    <Link to="/register" className="nav-link"><NavButton>
                         Register
-                    </Link>
-                </NavButton>
+                        </NavButton></Link>
+                
                 </List>    
                 
             </>

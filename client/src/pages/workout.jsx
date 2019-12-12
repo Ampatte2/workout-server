@@ -3,7 +3,7 @@ import Increment from "./buttons/Increment";
 import Decrement from "./buttons/Decrement";
 import {connect} from "react-redux";
 import {nextDay, nextWeek, prevDay, prevWeek, newWorkout} from "../actions";
-import {CollDiv, InsDiv, Wrapper, Title, Header1, Header2, ListItem, ButtonDisplay} from "../style/styledcomponents"
+import {WorkoutDiv, CollDiv, InsDiv, Wrapper, Title, Header1, Header2, ListItem, ButtonDisplay} from "../style/styledcomponents"
 import Collapsible from "react-collapsible"
 import "../style/index.css"
 
@@ -100,17 +100,17 @@ class workout extends Component {
                 <Wrapper>
                 <Header1>Hello {this.props.user} your workout for day {this.props.day +1} and week {this.props.week +1}</Header1>
                 <br/>
-                <ButtonDisplay>
-                <div>
-                <Increment day={this.props.day} disabled={this.state.disabled} week={this.props.week} handleClick={this.handleClick}/>
-                </div>
-                <div>
-                    <Decrement day={this.props.day} week={this.props.week} handleClick={this.handleClick}/>
-                </div>
-                </ButtonDisplay>
-                <div>
+                    <ButtonDisplay>
+                        <div>
+                            <Increment day={this.props.day} disabled={this.state.disabled} week={this.props.week} handleClick={this.handleClick}/>
+                        </div>
+                        <div>
+                            <Decrement day={this.props.day} week={this.props.week} handleClick={this.handleClick}/>
+                        </div>
+                    </ButtonDisplay>
+                <WorkoutDiv>
                     {workoutDiv}
-                </div>                
+                </WorkoutDiv>                
                 
                 </Wrapper>
             </div>

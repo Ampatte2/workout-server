@@ -49,13 +49,13 @@ function sample() {
     return (
         <Wrapper>
             <Wrapper>
-            
             <Header1>With Workout Mixer EveryDay is a New Challenge</Header1>
             <BorderBottom/>
             <Paragraph>Workout Mixer provides a completely randomized workout plan. It is Perfect for those that want to break up their routine and increase their strength</Paragraph>
             <Paragraph>With 24 different workouts for 6 muscle groups, every month is different than the last</Paragraph>
             <Paragraph>Here is a sample of just one combination of workouts for the Triceps</Paragraph>
             </Wrapper>
+            
             {workoutDiv}
            
         
