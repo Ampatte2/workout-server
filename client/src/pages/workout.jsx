@@ -98,15 +98,13 @@ class workout extends Component {
         return (
             <div>
                 <Wrapper>
-                <Header1>Hello {this.props.user} your workout for day {this.props.day +1} and week {this.props.week +1}</Header1>
+                <Header1>{this.props.user} your challenge for Week [ {this.props.week +1} ] Day [ {this.props.day +1} ] is below  </Header1>
                 <br/>
                     <ButtonDisplay>
-                        <div>
+                        
                             <Increment day={this.props.day} disabled={this.state.disabled} week={this.props.week} handleClick={this.handleClick}/>
-                        </div>
-                        <div>
                             <Decrement day={this.props.day} week={this.props.week} handleClick={this.handleClick}/>
-                        </div>
+                        
                     </ButtonDisplay>
                 <WorkoutDiv>
                     {workoutDiv}

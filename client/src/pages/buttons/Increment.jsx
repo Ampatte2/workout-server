@@ -1,13 +1,13 @@
 import React from 'react'
-import {Button} from "../../style/styledcomponents"
+import {IncrementButton} from "../../style/styledcomponents"
 
 function Increment(props) {
          
     
     if(props.day===3 &&props.week===3){
-        return (<Button name = "newworkout" disabled={props.disabled} onClick={props.handleClick}>NewWorkout</Button>)
+        return (<IncrementButton name = "newworkout" disabled={props.disabled} onClick={props.handleClick}>NewWorkout</IncrementButton>)
     }else{
-        return <Button name="increment" onClick={props.handleClick}>Tomorrow's Workout</Button>
+        return <IncrementButton name="increment" onClick={props.handleClick}>Tomorrow's Workout</IncrementButton>
     }
 
 }

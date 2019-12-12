@@ -66,6 +66,7 @@ class login extends Component {
                     </label>
                     
                     <Button type="submit" value="Submit">Submit</Button>
+                    <br/>
                     {this.props.error ? <Paragraph>Incorrect Username or Password</Paragraph>: <Paragraph>Surprise Yourself Every Week of Every Month</Paragraph>}
                 </Form>
                 

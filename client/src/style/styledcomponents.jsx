@@ -18,24 +18,24 @@ const Wrapper = styled.div.attrs({
 `
 const Title = styled.h1`
     text-transform:uppercase;
-    padding:40px 40px 40px 40px;
+    padding:20px 20px 20px 20px;
     border: solid #78C0E0;
     width: 50%;
     text-align: center;
     margin:auto;
-    margin-top:5%;
+    margin-top:6%;
     margin-bottom:10px;
     background-color:#2B2D42;
     border-radius: 5px;
     color:#78C0E0;
     font-size:4vw;
     @media ${device.tablet}{
-        font-size:10vw;
+        font-size:8vw;
     }
 `
 const Paragraph = styled.p`
     text-align: center;
-    width:100%;
+    width:75%;
     margin:auto;
     margin-top:20px;
     font-size:2vw;
@@ -57,8 +57,8 @@ const Header2 = styled.h2`
     border-bottom:solid rgba(43,45,66, 0.4);
     border-width:10px;
     width:50%;
-    padding:20px;
-    font-size:4vw;
+    padding:10px;
+    font-size:3vw;
     @media ${device.tablet}{
         font-size:6.0vw;
     }
@@ -70,7 +70,7 @@ border:outset #78C0E0;
 text-align:center;
 margin:10px 0px 0px 0px
 font-size:1.5rem;
-width:80%;
+width:60%;
 margin:auto;
 margin-top:20px;
 border-radius:5px;
@@ -85,7 +85,7 @@ border:outset #78C0E0
 text-align:center
 margin:10px 0px 0px 0px
 font-size:1.5rem;
-width:80%;
+width:60%;
 margin:auto;
 margin-top:20px;
 border-radius:5px;
@@ -116,12 +116,19 @@ const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  @media ${device.tablet}{
+    padding:20px 20px 20px 10px
+}
+  
 `
 const Form = styled.form`
-    width:50%;
+    width:35%;
     justify-content:center;
     margin:auto;
     margin-top:40px;
+    @media ${device.tablet}{
+        width:80%;
+    }
 `
 const Button = styled.button`
     background-color: #2B2D42
@@ -132,6 +139,47 @@ const Button = styled.button`
     border:outset #78C0E0;
     border-radius:5px;
     float:right;
+    padding: 5px 20px 5px 20px;
+    margin: auto;
+    @media ${device.tablet}{
+        padding: 5px 10px 5px 10px;
+    }
+`
+
+const IncrementButton = styled.button`
+    background-color: #2B2D42
+    display:inline-block;
+    &:hover{
+        background-color:#4F8585
+    }
+    color:#78C0E0;
+    border:outset #78C0E0;
+    border-radius:5px;
+    padding:20px 20px 20px 20px
+    float:right;
+    font-size:1.5vw
+    @media ${device.tablet}{
+        padding:10px 10px 10px 10px
+        font-size:4vw
+    }
+`
+
+const DecrementButton = styled.button`
+    background-color: #2B2D42
+    display:inline-block;
+    &:hover{
+        background-color:#4F8585
+    }
+    color:#78C0E0;
+    border:outset #78C0E0;
+    border-radius:5px;
+    padding:20px 20px 20px 20px
+    float:left;
+    font-size:1.5vw
+    @media ${device.tablet}{
+        padding:10px 10px 10px 10px
+        font-size:4.0vw
+    }
 `
 const NavButton = styled.button`
 background-color: #2B2D42
@@ -165,11 +213,12 @@ const Nav = styled.nav`
 `
 
 const ButtonDisplay = styled.div`
-    flex-direction: row;
-    justify-content: center;
-    width:100%;
-    
-    
+    justify-content: space-between;
+    width:40%;
+    margin:auto;
+    @media ${device.tablet}{
+        width:100%;
+    }
 `
 
 const BorderBottom = styled.div`
@@ -183,4 +232,23 @@ const AppDiv = styled.div`
     height:100%;
     border: solid black;
 `
-export{AppDiv,List, WorkoutDiv, CollDiv, InsDiv, Wrapper, Title, Header1, Header2, ListItem, Paragraph, Input, Form, Button, BorderBottom, NavButton, Nav, ButtonDisplay}
+export{IncrementButton, 
+    DecrementButton,
+    AppDiv,
+    List, 
+    WorkoutDiv, 
+    CollDiv, 
+    InsDiv, 
+    Wrapper, 
+    Title, 
+    Header1, 
+    Header2, 
+    ListItem, 
+    Paragraph, 
+    Input, 
+    Form, 
+    Button, 
+    BorderBottom, 
+    NavButton, 
+    Nav, 
+    ButtonDisplay}
