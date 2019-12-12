@@ -187,28 +187,65 @@ background-color: #2B2D42
     background-color:#4F8585
 }
 color:#78C0E0;
-border:none
-transform:translateY(200%)
+border:none;
+float:right;
+font-size:1.75vw
+
+@media ${device.tablet}{
+    font-size:4vw;
+}
 `
 
-const List = styled.div`
-    float:right;
+const List = styled.li`
     
+margin-bottom:20px;
+display:block;
+background-color:#2B2D42;
+border: none;
+margin:auto;
+margin-left:1%;
 
-    
+border-radius:5px;
+height:50%;
+float: right;
+
+a {
+    display: block;
+    color: white;
+    text-align: none;
+    text-decoration: none;
+  }
     
 `
-const Nav = styled.nav`
-    margin-bottom:20px;
-    background-color:#2B2D42;
-    border: solid #78C0E0;
-    width:100%;
-    margin:auto;
-    margin-bottom:20px;
-    margin-top:20px;
-    border-radius:5px;
-    height:50%;
-    transform:translateX(-0.40%)
+
+const ListWorkout = styled.li`
+    
+margin-bottom:20px;
+display:block;
+background-color:#2B2D42;
+border: none;
+margin:auto;
+
+border-radius:5px;
+height:50%;
+float: left;
+
+a {
+    display: block;
+    color: white;
+    text-align: none;
+    text-decoration: none;
+  }
+    
+`
+const Ul = styled.ul`
+list-style-type: none;
+margin: 0;
+padding: 20px 20px 20px 20px;
+overflow: hidden;
+background-color:#2B2D42;
+width:75%
+margin:auto;
     
 `
 
@@ -231,6 +268,7 @@ const AppDiv = styled.div`
     width:100%;
     height:100%;
     border: solid black;
+    background-color:red;
 `
 export{IncrementButton, 
     DecrementButton,
@@ -250,5 +288,6 @@ export{IncrementButton,
     Button, 
     BorderBottom, 
     NavButton, 
-    Nav, 
-    ButtonDisplay}
+    Ul, 
+    ButtonDisplay,
+    ListWorkout}

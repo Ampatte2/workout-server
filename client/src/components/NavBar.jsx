@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Nav} from "../style/styledcomponents"
+import {Ul} from "../style/styledcomponents"
 import Links from "./Links"
 
 
@@ -7,9 +7,11 @@ class NavBar extends Component {
     render() {
         return (
             
-                <Nav>
+                <Ul>
+                    
                     <Links />
-                </Nav>
+                    
+                </Ul>
             
         )
     }
