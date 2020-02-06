@@ -6,13 +6,9 @@ import Links from "./Links"
 class NavBar extends Component {
     render() {
         return (
-            
                 <Ul>
-                    
                     <Links />
-                    
                 </Ul>
-            
         )
     }
 }

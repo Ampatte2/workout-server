@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux';
 import {registerUser} from "../actions"
-
-import {Wrapper,Form, Header1, Button, Input} from "../style/styledcomponents"
+import {Form, Header1, Button, Input, Paragraph} from "../style/styledcomponents"
 
 //call api that creates new user
 //redirect to login page
 
-class register extends Component {
+class register extends React.Component {
 
     constructor(props){
         super(props)
@@ -60,20 +59,23 @@ class register extends Component {
             error = ""
         }
         return (
-            <Wrapper>
+            <>
             <Form name="login-form" onSubmit={this.handleSubmit}>
                 <Header1>Register</Header1>
-                <Input name="username" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Username"/>
+                <Input name="username" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Your Username"/>
 
-                <Input name="password" type={this.state.visibility} value={this.state.password} onChange={this.handleChange}placeholder="Password"/>
+                <Input name="password" type={this.state.visibility} value={this.state.password} onChange={this.handleChange}placeholder="Your Password"/>
+                <div style={{position: "absolute", bottom:"0", left:"0",display:"flex", flexDirection:"row", marginTop:"5vh", width:"100%", justifyContent:"space-between"}}>
+                    
+                <div style={{fontSize:"3vh"}}>Show password<input type="checkbox" style={{width:"1.5vh", height:"1.5vh", marginTop:"1.25vh", marginLeft:"1vh"}} onClick={this.handleClick}/></div>
 
-                <label>Show Password
-                <input type="checkbox" onClick={this.handleClick}/>
-                </label>
                 <Button type="submit" value="Submit">Submit</Button>
+                
+                </div>
+                <Paragraph>{error}</Paragraph>
             </Form>
-            {error}
-        </Wrapper>
+            
+            </>
         )
     }
 }

@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {connect} from "react-redux";
 import {fetchWorkout} from "../actions"
-import {Wrapper,Form, Header1, Button, Paragraph, Input} from "../style/styledcomponents"
+import {Form, Header1, Button, Paragraph, Input} from "../style/styledcomponents"
 
 
-class login extends Component {
+class login extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -53,25 +53,30 @@ class login extends Component {
 
     render() {
         return (
-            <Wrapper>
+            
                 <Form name="login-form" onSubmit={this.handleSubmit}>
+
                     <Header1>Please Login</Header1>
                     
-                    <Input name="username" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Username"/>
+                    <Input name="username" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Your Username"/>
 
-                    <Input name="password" type={this.state.visibility} value={this.state.password} onChange={this.handleChange}placeholder="Password"/>
-
-                    <label>Show Password
-                    <input type="checkbox" onClick={this.handleClick}/>
-                    </label>
+                    <Input name="password" type={this.state.visibility} value={this.state.password} onChange={this.handleChange}placeholder="Your Password"/>
+                    
+                    
+                    <div style={{position: "absolute", bottom:"0", left:"0",display:"flex", flexDirection:"row", marginTop:"5vh", width:"100%", justifyContent:"space-between"}}>
+                    
+                    <div style={{fontSize:"3vh"}}>Show password<input type="checkbox" style={{width:"1.5vh", height:"1.5vh", marginTop:"1.25vh", marginLeft:"1vh"}} onClick={this.handleClick}/>
+                    </div>
+                    
+                    
                     
                     <Button type="submit" value="Submit">Submit</Button>
-                    <br/>
-                    {this.props.error ? <Paragraph>Incorrect Username or Password</Paragraph>: <Paragraph>Surprise Yourself Every Week of Every Month</Paragraph>}
+                    </div>
+                    {this.props.error ? <Paragraph>Incorrect Username or Password</Paragraph> : <Paragraph>Get Ready For a New Workout Every Week</Paragraph>}
                 </Form>
                 
                 
-            </Wrapper>
+
         )
     }
 }

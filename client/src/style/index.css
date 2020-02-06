@@ -1,9 +1,24 @@
+body{
+  color:#2B2D42;
+}
+
 .collapsible{
     background-color: #2B2D42;
     color:#78C0E0;
-    border-radius:2px;
+    border-radius:5px;
     overflow:hidden;
+    width:40vw;
+    margin:auto;
+    text-align:center;
+    font-size:3vh;
+    margin-bottom:2vh;
+    
 
+}
+@media only screen and (max-width: 800px){
+  .collapsible{
+    width:80vw;
+  }
 }
 
 .collapsible:hover{
@@ -13,3 +28,21 @@
 li {
   float: left;
 }
+
+.bgimage {
+  height:30vh;
+  background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  margin:auto;
+}
+
+.bgimage h1 {
+  color:white;
+  text-shadow:2px 2px #333;
+  text-align: center;
+  position: relative;
+  top:5vh
+}
+

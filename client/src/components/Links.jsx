@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-import styled from "styled-components";
 import {connect} from "react-redux";
 import {logOut} from "../actions";
-import logo from "../images/Banner.jpg";
-import {NavButton, List, ListWorkout} from "../style/styledcomponents"
-import Collapsible from "react-collapsible"
-
-
-
-
-
+import {NavButton, List} from "../style/styledcomponents"
 
 
 
@@ -23,7 +15,7 @@ class Links extends Component {
             display = <>
             
             
-            <Link to="/login" className="navbar-brand" onClick={this.props.logOut}><NavButton>Logout</NavButton></Link>
+            <Link to="/login" className="navbar-brand" onClick={this.props.logOut}><NavButton style={{float:"right"}}>Logout</NavButton></Link>
             
             </>
         } else{
@@ -45,11 +37,11 @@ class Links extends Component {
                     Register
                     </NavButton>
                 </Link></List>
-                <ListWorkout><Link to="/" className="navbar-brand">
+                <List><Link to="/" className="nav-link">
                     <NavButton>
-                        Workout Mixer
+                        Example
                     </NavButton>
-                </Link></ListWorkout>
+                </Link></List>
                 
                    
                 
