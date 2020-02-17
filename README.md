@@ -27,7 +27,7 @@ let workoutShuffler = (workout)=>{
         let sampleWorkout = workout;
 
 
-        ```let weekArray = [["chest"], ["legs"]];
+        `let weekArray = [["chest"], ["legs"]];
         let dArray = ["bicep", "tricep", "back", "shoulder"]
         let monthArray = [];
         let thisMonth = [];
@@ -104,7 +104,7 @@ let workoutShuffler = (workout)=>{
        thisMonth.push(thisWeek)
        thisWeek =[];
     })
-    return thisMonth};```
+    return thisMonth};`
 
 
 It shuffles the muscle groups, the individual excersizes, and generates four weeks of completely random order while maintaining
