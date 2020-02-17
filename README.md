@@ -7,6 +7,7 @@ or 1 of [legs, chest]
 
 This uses Mongoose and Atlas MongoDB database where the schema is:
 
+```
 const User = new Schema({
     username : {type: String, unique: true, required: true},
     hash: {type:String, required: true},
@@ -14,6 +15,7 @@ const User = new Schema({
     monthlyWorkout:{type: Array},
     defaultWorkout: {type: Boolean},
 })
+```
 
 When a user registers their password is hashed by BCrypt and saved in the database. The server calls the database and finds the
 entry with the defaultWorkout property of true and copies it to the new Users entry to have the base sampleworkout for that 
@@ -25,7 +27,7 @@ let workoutShuffler = (workout)=>{
         let sampleWorkout = workout;
 
 
-        let weekArray = [["chest"], ["legs"]];
+        ```let weekArray = [["chest"], ["legs"]];
         let dArray = ["bicep", "tricep", "back", "shoulder"]
         let monthArray = [];
         let thisMonth = [];
@@ -102,8 +104,8 @@ let workoutShuffler = (workout)=>{
        thisMonth.push(thisWeek)
        thisWeek =[];
     })
-    return thisMonth
-};
+    return thisMonth};```
+
 
 It shuffles the muscle groups, the individual excersizes, and generates four weeks of completely random order while maintaining
 the above mentions 2 of and 1 of muscle groups of [bicep,tricep,shoulder,back] and [legs, chest].
